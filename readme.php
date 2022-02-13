@@ -1,6 +1,0 @@
-<?php
-//welcome Projects
-
-
-
-?>
