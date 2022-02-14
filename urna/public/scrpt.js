@@ -111,7 +111,7 @@ function Confirma() {
         } else {
 
             fim.innerHTML = '<div class="aviso--gigante pisca"> FIM </div>';
-            descricaoFim.innerHTML = '<div class="msg--desc pisca"> Você Votou Num Ladrão </div>';
+            descricaoFim.innerHTML = '<div class="msg--desc pisca">Você Votou Num Ladrão</div>';
         }
     }
 }
@@ -193,7 +193,7 @@ function atualizaInterface() {
         //foto do camarada:
         let fotosHtml = '';
         for (let i in candidato.fotos) {
-            fotosHtml += `<div class="d-1-image"><img src="../urna/images/${candidato.fotos[i].url}" alt="" />${candidato.fotos[i].legenda}</div>`;
+            fotosHtml += `<div class="d-1-image"><img src="./images/${candidato.fotos[i].url}" alt="" />${candidato.fotos[i].legenda}</div>`;
         }
         lateral.innerHTML = fotosHtml;
 

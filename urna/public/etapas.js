@@ -59,7 +59,7 @@ let etapas = [
             partido: 'PSOL',
             vice: 'Fabricio Queiroz',
             fotos: [{
-                    url: '84.png',
+                    url:'84.png',
                     legenda: 'Prefeito'
                 },
                 {
