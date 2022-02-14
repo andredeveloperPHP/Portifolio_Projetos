@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../urna/style.css">
+    <title>Urna Eletronica</title>
+</head>
+<body>
+    <!-- Criando o Layout da Urna -->
+    <div class="urna">
+        <div class="tela">
+            <div class="d-1">
+                <div class="d-1-left">
+                    <div class="d-1-1">
+                        <span>SEU VOTO PARA</span>
+                    </div>
+                    <div class="d-1-2">
+                        <span>DEPUTADO FEDERAL</span>
+                    </div>
+                    <div class="d-1-3">
+                        <div class="numero pisca"></div>
+                        <div class="numero "></div>
+                    
+                    </div>
+                    <div class="d-1-4">
+                        Nome: FULANO DE TAL<br>
+                        Partido: PARTIDO DOS TRABALHADORES<br>
+                        Vice-Prefeito: BELTRANO DE TAL<br>
+                    </div>
+                  </div>
+                <div class="d-1-right">
+                    <div class="d-1-image">
+                        <img src="../urna/images/84.png" alt="" />
+                        Prefeito
+                    </div>
+                    <!---------------------------------------------------->
+                    <div class="d-1-image small">
+                        <img src="../urna/images/84_2.jpg" alt="" />
+                        Vice-Prefeito
+                    </div>
+                </div>
+                                
+            </div>
+            <div class="d-2">
+                Aperte a Tela:<br>
+                CONFIRMA para Confirmar este Voto!<br>
+                CORRIGE para REINICIAR este Voto!<br>
+            </div>
+          </div>
+        <div class="teclado">
+            <div class="teclado--linha">
+                <div class="teclado--botao" onclick="Clicou('1')">1</div>
+                <div class="teclado--botao" onclick="Clicou('2')">2</div>
+                <div class="teclado--botao" onclick="Clicou('3')">3</div>
+
+            </div>
+
+            <div class="teclado--linha">
+                <div class="teclado--botao" onclick="Clicou('4')">4</div>
+                <div class="teclado--botao" onclick="Clicou('5')">5</div>
+                <div class="teclado--botao" onclick="Clicou('6')">6</div>
+
+            </div>
+            <div class="teclado--linha">
+                <div class="teclado--botao" onclick="Clicou('7')">7</div>
+                <div class="teclado--botao" onclick="Clicou('8')">8</div>
+                <div class="teclado--botao" onclick="Clicou('9')">9</div>
+            </div>
+            <div class="teclado--linha">
+                <div class="teclado--botao" onclick="Clicou('0')">0</div>
+            </div>
+            <div class="teclado--linha">
+                <!-- Botões de confirma, corrige , Brancos-->
+                <div class="teclado--botao botao--branco" onclick="Branco()">BRANCO</div>
+                <div class="teclado--botao botao--corrige" onclick="Corrige()">CORRIGE</div>
+                <div class="teclado--botao botao--confirma" onclick="Confirma()">CONFIRMA</div>
+            </div>
+        </div>
+    </div>
+    <!--Puxando os arquivos Javascript, tanto os Etapas.js como o funcional script da minha Urna-->
+    <script src="../urna/etapas.js"></script>   
+    <script src="../urna/scrpt.js"></script>
+
+</body>
+</html>
