@@ -1,33 +1,44 @@
-
 @keyframes pisca {
-    0% { opacity: 0.2;}
-    50%{opacity: 1;}
-    100% {opacity: 0.2;}
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
 }
 
 body {
     margin: 0;
     display: flex;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    gap:20px;
+}
+
+.urna {
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
 
 }
-.urna{
-background-color: #dbd5c9;
-padding:30px;
-display: flex;
 
-}
 .tela {
     width: 500px;
     height: 320px;
-    background:linear-gradient(to right, #E8E8E8, #C1C1C1);
+    background: linear-gradient(to right, #E8E8E8, #C1C1C1);
     border: 2px solid #555;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 
 }
+
 .teclado {
     margin-left: 30px;
     background-color: #403A3A;
@@ -37,40 +48,40 @@ display: flex;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    
+
 }
 
-.teclado--botao{
+.teclado--botao {
     width: 70px;
     height: 40px;
     background-color: #000;
     color: #fff;
-    font-size:25px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    cursor:pointer;
+    cursor: pointer;
     box-shadow: 3px 3px 0px #555;
 
 }
 
 .botao--branco {
     background-color: #FFF;
-    color:#000;
-    font-size:15px;
+    color: #000;
+    font-size: 15px;
 }
 
 .botao--corrige {
     background-color: #F09046;
-    color:#000;
-    font-size:15px;
+    color: #000;
+    font-size: 15px;
 }
 
 .botao--confirma {
     background-color: #48C079;
-    color:#000;
-    font-size:15px;
+    color: #000;
+    font-size: 15px;
     width: 90px;
     height: 50px;
 }
@@ -81,7 +92,7 @@ display: flex;
 }
 
 .d-1-left {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -116,7 +127,7 @@ display: flex;
     border: 1px solid #000;
     text-align: center;
     line-height: 40px;
-    font-size:25px;
+    font-size: 25px;
 
 }
 
@@ -127,17 +138,17 @@ display: flex;
 }
 
 .d-1-4 {
-    flex:1;
+    flex: 1;
     line-height: 30px;
 }
 
 
 .d-1-right {
-    width:90px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-        
+
 }
 
 .d-1-image {
@@ -146,6 +157,7 @@ display: flex;
     text-align: center;
     font-size: 14px;
 }
+
 .d-1-image img {
     width: 100%;
 }
@@ -153,8 +165,9 @@ display: flex;
 /*Quando eu tiver uma IMG com a class Small: A largura dele vai ficar em 70%*/
 .d-1-image.small {
     width: 80%;
-    font-size:12px;
+    font-size: 12px;
 }
+
 .d-2 {
     height: 50px;
     font-size: 14px;
@@ -165,15 +178,16 @@ display: flex;
 /*estilização do Aviso do Voto Nulo:*/
 
 
-.aviso--grande{
+.aviso--grande {
     font-size: 40px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     margin-top: 36px;
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }
+
 .msg--desc {
     font-size: 24px;
     margin: auto;
@@ -183,6 +197,7 @@ display: flex;
 
 
 }
+
 div.aviso--gigante {
     font-size: 80px;
     margin: auto;
@@ -191,3 +206,20 @@ div.aviso--gigante {
     font-weight: bold;
 }
 
+
+.graficos--container {
+    width: 500px;
+    min-height: 10px;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content div{
+    display: flex;
+    align-items: center;
+}

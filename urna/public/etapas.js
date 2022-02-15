@@ -5,7 +5,7 @@ let etapas = [
     candidatos: [{
             numero: '38111',
             nome: "Jair Messias Bolsonaro",
-            votos: 0, //adicionando votos
+            votos: Math.round(Math.random() * 100 + 1), //adicionando votos
             partido: "Partido Liberal PL",
             fotos: [{
                 url: 'Bolsonaro.jpg',
@@ -17,7 +17,7 @@ let etapas = [
         {
             numero: '77222',
             nome: 'Renam Calheiros ',
-            votos:0, //adicionando votos
+            votos:Math.round(Math.random() * 100 + 1), //adicionando votos
             partido: 'MDB',
             fotos: [{
                 url: 'Renam.jpg',
@@ -38,7 +38,7 @@ let etapas = [
     candidatos: [{
             numero: '13',
             nome: 'Luiz Inacio Lula da Silva',
-            votos: 0, //add
+            votos: Math.round(Math.random() * 100 + 1), //add
             partido: 'Partido dos Trabalhadores',
             vice: 'Geraldo Alckmin ',
             fotos: [{
@@ -55,7 +55,7 @@ let etapas = [
         {
             numero: '17',
             nome: 'Flavio Bolsonaro ',
-            votos: 0, //add
+            votos: Math.round(Math.random() * 100 + 1), //add
             partido: 'PSOL',
             vice: 'Fabricio Queiroz',
             fotos: [{

@@ -13,6 +13,8 @@
 let etapaAtual = 0;
 let numero = '';
 let votoBranco = false;
+let votos = []
+let graphic = document.getElementById("grafico-container");
 let control = document.getElementsByClassName('d-1-3')[0];
 let fim = document.getElementsByClassName('d-1')[0];
 let descricaoFim = document.getElementsByClassName('d-2')[0];
@@ -94,12 +96,14 @@ function Confirma() {
     let votoConf = false;
 
     if (votoBranco = false) {
+        votoConf = true;
         votoBranco = true;
         console.log("Confirmando Voto em BRANCO...!");
-
+        votos.push(votoBranco)
     } else if (numero.length === etapa.numeros) {
         votoConf = true;
         console.log("Confirmando como " + numero);
+        votos.push(numero)
     }
 
 
@@ -111,7 +115,13 @@ function Confirma() {
         } else {
 
             fim.innerHTML = '<div class="aviso--gigante pisca"> FIM </div>';
-            descricaoFim.innerHTML = '<div class="msg--desc pisca">Você Votou Num Ladrão</div>';
+            if (votos[0] === true || votos[1] === true)
+                descricaoFim.innerHTML = '<div class="msg--desc pisca">Você Votou Em só um Ladrão</div>';
+            if (votos[0] === true && votos[1] === true)
+                descricaoFim.innerHTML = '<div class="msg--desc pisca">Você Votou Nulo ou Branco</div>';
+            if (votos[0] !== true && votos[1] !== true)
+                descricaoFim.innerHTML = '<div class="msg--desc pisca">Você Votou Em Ladrões</div>';
+            setupGraphics()
         }
     }
 }
@@ -210,7 +220,18 @@ function atualizaInterface() {
 }
 comecarEtapa();
 
+function setupGraphics() {
+    graphic.innerHTML = etapas.map((etapa) => etapa.candidatos.map((canditato) => `
+    <div class="content">
+        <span>${canditato.nome}</span>
+        <div>
+        <div style="min-height:30px;min-width:${canditato.votos}px;background-color:#ff0000;display:inline-block;"></div>
+        ${canditato.votos} votos confirmados
+        </div>
+        <hr />
+    </div>`))
 
+}
 
 
 
